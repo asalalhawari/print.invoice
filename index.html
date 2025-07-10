@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .invoice-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 40px;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+            object-fit: contain;
+        }
+
+        .company-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .company-name .jolife {
+            color: #c41e3a;
+        }
+
+        .company-name .info-tech {
+            color: #666;
+            margin-left: 5px;
+        }
+
+        .tax-number {
+            text-align: center;
+            font-size: 30px;
+            color: #666;
+            margin: 25px 0;
+            letter-spacing: 3px;
+        }
+
+        .invoice-banner {
+            background-color: #c41e3a;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            height: 50px;
+            margin: 25px 0;
+        }
+
+        .invoice-details {
+            display: flex;
+            justify-content: space-between;
+            margin: 35px 0;
+        }
+
+        .invoice-to {
+            flex: 1;
+        }
+
+        .invoice-meta {
+            text-align: left;
+            flex: 1;
+        }
+
+        .invoice-meta div {
+            margin-bottom: 25px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        .items-table th {
+            background-color: #f8f8f8;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            color: #999;
+            font-weight: normal;
+            font-size: 13px;
+        }
+
+        .items-table .price-col,
+        .items-table .qty-col,
+        .items-table .total-col {
+            text-align: center;
+            width: 80px;
+        }
+
+        .items-table .sl-col {
+            width: 40px;
+            text-align: center;
+        }
+
+        .items-area {
+            height: 250px;
+            border-left: 2px solid #c41e3a;
+            border-right: 2px solid #c41e3a;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .totals-section {
+            text-align: right;
+            margin-top: 25px;
+        }
+
+        .totals-section div {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .sub-total {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .final-total {
+            font-weight: bold;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="header">
+            <img src="logo (1).png" alt="JOLIFE Logo" class="logo">
+            <div class="company-name">
+                <span class="jolife"></span><span class="info-tech"> INFORMATION TECHNOLOGY</span>
+            </div>
+        </div>
+
+        <div class="tax-number">
+            Tax Identification Number : 1140250
+        </div>
+
+        <div class="invoice-banner">
+            INVOICE
+        </div>
+
+        <div class="invoice-details">
+            <div class="invoice-to">
+                <span class="label">Invoice To :</span>
+            </div>
+            <div class="invoice-meta">
+                <div>
+                    <span class="label">Invoice #</span>
+                </div>
+                <div>
+                    <span class="label">Date</span>
+                </div>
+            </div>
+        </div>
+
+        <table class="items-table">
+            <thead>
+                <tr>
+                    <th class="sl-col">SL</th>
+                    <th>Item Description</th>
+                    <th class="price-col">Price</th>
+                    <th class="qty-col">Qty</th>
+                    <th class="total-col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="items-area" colspan="5" style="padding: 0;">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="totals-section">
+            <div class="sub-total">Sub total</div>
+            <div class="final-total">Total</div>
+        </div>
+    </div>
+</body>
+</html>
